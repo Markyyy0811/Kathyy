@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff7f3">
+<title>A Little Surprise for You</title>
+<style>
+:root{color-scheme:light dark;--paper:light-dark(#fffaf6,#241b25);--ink:light-dark(#4b2938,#fff0f5);--muted:light-dark(#806773,#ddc5d2);--pink:light-dark(#d96f8c,#f19ab2);--pink2:light-dark(#f8dbe2,#573043);--line:light-dark(#f0d8df,#563746);--white:light-dark(#fff,#32242f)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink)}button{font:inherit;cursor:pointer}.app{min-height:100vh;background:radial-gradient(ellipse at 10% 0%,light-dark(#ffe6eb,#422738),transparent 48%),radial-gradient(ellipse at 95% 90%,light-dark(#f4e5ff,#30243d),transparent 40%),var(--paper);padding:24px 18px 40px;overflow:hidden}.wrap{max-width:520px;margin:0 auto}.topline{display:flex;justify-content:center;align-items:center;gap:8px;color:var(--muted);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin:12px 0 26px}.tiny-heart{color:var(--pink);font-size:1.1rem}.hero{text-align:center;padding:32px 18px 26px}.eyebrow{color:var(--pink);font-size:.78rem;text-transform:uppercase;letter-spacing:.17em;font-weight:700}.hero h1{font-family:Georgia,serif;font-weight:500;line-height:1.13;font-size:clamp(2.25rem,9vw,3.6rem);margin:17px 0 14px;letter-spacing:-.04em}.hero h1 em{color:var(--pink);font-weight:400}.intro{color:var(--muted);line-height:1.8;max-width:340px;margin:0 auto 24px;font-size:.98rem}.heart-art{width:106px;height:90px;margin:0 auto 20px;display:grid;place-items:center;font-size:4.6rem;color:var(--pink);animation:float 3s ease-in-out infinite;text-shadow:0 8px 24px #d96f8c30}.btn{border:0;border-radius:999px;padding:14px 24px;background:var(--pink);color:white;font-weight:700;box-shadow:0 8px 20px #d96f8c30;transition:transform .18s,filter .18s}.btn:active{transform:scale(.97)}.btn:hover{filter:brightness(1.04)}.btn.secondary{background:transparent;color:var(--pink);border:1px solid var(--line);box-shadow:none}.hint{font-size:.78rem;color:var(--muted);margin-top:14px}.card{border:1px solid var(--line);background:light-dark(#fffdfb,#2b202c);border-radius:24px;padding:24px 21px;margin:20px 0;box-shadow:0 16px 42px #4a20300a}.card h2{font-family:Georgia,serif;font-size:1.65rem;font-weight:500;margin:0 0 12px}.card p{color:var(--muted);line-height:1.85;margin:0}.hidden{display:none!important}.envelope-wrap{text-align:center;padding:28px 12px}.envelope{font-size:5.8rem;filter:drop-shadow(0 8px 14px #d96f8c25);animation:float 3s ease-in-out infinite}.letter{white-space:normal;line-height:1.95;color:var(--muted);font-family:Georgia,serif;font-size:1.08rem}.letter p{margin:0 0 16px}.signoff{color:var(--pink);font-family:Georgia,serif;font-size:1.35rem;font-style:italic;margin-top:18px}.divider{height:1px;background:var(--line);margin:22px 0}.footer{text-align:center;color:var(--muted);font-size:.78rem;padding:28px 0 0}.footer span{color:var(--pink)}.confetti{position:fixed;pointer-events:none;z-index:5;animation:fall 2.8s ease-in forwards;font-size:20px}@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}@keyframes fall{0%{transform:translateY(-10vh) rotate(0);opacity:1}100%{transform:translateY(105vh) rotate(500deg);opacity:0}}@media(min-width:600px){.app{padding-top:36px}.hero{padding-top:42px}.card{padding:30px}}
+</style>
+</head>
+<body>
+<main class="app"><div class="wrap">
+<div class="topline"><span class="tiny-heart">♥</span> made with a little extra love <span class="tiny-heart">♥</span></div>
+<section class="hero" id="welcome">
+<div class="heart-art" aria-hidden="true">♡</div>
+<div class="eyebrow">just for you</div>
+<h1>I made a little<br><em>something for you.</em></h1>
+<p class="intro">It's not a big gift, but it comes from a heart that feels really lucky to have you in its life.</p>
+<button class="btn" id="startBtn">Open your surprise ♡</button>
+<div class="hint">Psst… make sure you have a little moment for yourself.</div>
+</section>
+<section class="card hidden" id="ready">
+<div class="envelope-wrap"><div class="envelope" aria-hidden="true">💌</div><h2>One little question…</h2><p>Are you ready to see what's inside?</p><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px"><button class="btn" id="yesBtn">I'm ready ♡</button><button class="btn secondary" id="waitBtn">Wait, I'm shy</button></div></div>
+</section>
+<section class="card hidden" id="letterCard">
+<div class="eyebrow" style="margin-bottom:12px">a note from my heart</div><h2>Hey, you. ♡</h2>
+<div class="letter">
+<p>I know nga dili pa ta both ready mo-commit karon, and I understand that. Honestly, dili pa sad ko fully ready, pero ganahan gihapon ko nga ikaw akong pilion.</p>
+<p>Pwede ba tika hulaton hangtod sa panahon nga ready na ta both? Dili tika gusto i-pressure or pugson nga mag-commit dayon.</p>
+<p>Gusto lang nako nga mahibaw-an nimo nga willing ko mohulat nimo, basta pareho gihapon ta og gusto nga hatagan ni nato og chance ang usag usa. ❤️</p>
+<p>For now, okay ra nako nga friends sa ta and hinay-hinay lang. No pressure, no rush. Gusto lang nako nga honest ta sa atong feelings ug sa unsay gusto nato both. ♡</p>
+</div><div class="divider"></div><div class="signoff">Take your time. ♡</div><p style="margin-top:5px;color:var(--pink)">From someone who wants to give us a chance.</p>
+<div style="text-align:center;margin-top:24px"><button class="btn" id="lastBtn">One last thing… ✨</button></div>
+</section>
+<section class="card hidden" id="finalCard" style="text-align:center;padding-top:32px;padding-bottom:32px">
+<div style="font-size:2.5rem;color:var(--pink);margin-bottom:8px">✧ ♡ ✧</div><h2 style="font-size:2rem">No pressure.<br>No rush. Just us. ♡</h2><p>I don't need an answer right away. I just wanted you to know how I feel, and that I'm happy to take things one step at a time—if that's what we both want.</p><div style="font-size:2.1rem;color:var(--pink);margin:22px 0 8px">♡</div><button class="btn secondary" id="againBtn">Read it again</button>
+</section>
+<div class="footer">sent with love, <span>just for you ♡</span></div>
+</div></main>
+<script>
+const $=id=>document.getElementById(id);function show(id){$(id).classList.remove('hidden');$(id).scrollIntoView({behavior:'smooth',block:'center'});}function sprinkle(){const symbols=['♡','♥','✧','💕'];for(let i=0;i<18;i++){const e=document.createElement('span');e.className='confetti';e.textContent=symbols[Math.floor(Math.random()*symbols.length)];e.style.left=Math.random()*100+'vw';e.style.animationDelay=(Math.random()*.9)+'s';e.style.color=['#d96f8c','#e9a1b3','#b79bd7'][Math.floor(Math.random()*3)];document.body.appendChild(e);setTimeout(()=>e.remove(),4000)}}
+$('startBtn').addEventListener('click',()=>show('ready'));$('yesBtn').addEventListener('click',()=>{show('letterCard');sprinkle()});$('waitBtn').addEventListener('click',()=>{$('waitBtn').textContent='No rush, take your time ♡';$('waitBtn').classList.add('secondary')});$('lastBtn').addEventListener('click',()=>{show('finalCard');sprinkle()});$('againBtn').addEventListener('click',()=>{$('letterCard').scrollIntoView({behavior:'smooth',block:'center'})});
+</script>
+</body>
+</html>
